@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Cadastro de Veículos</title>
+            <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h3>Cadastre seu veículo para vender muito mais rápido!</h3>
+            <h2>Cadastro</h2>
+            <h1>Venda fácil seu veículo!</h1>
+            <p>Descreva as características do seu veículo e marque todas os opcionais e características que ele possui.</p>
+            <form action="carros_cadastrados.php" method="post">
+
+                <p>Título do anúncio:*</p>
+                <input type="text" name="title" placeholder="Defina um título para o seu veículo" maxlength="30" required>
+
+                <p>Preço do veículo:*</p>
+                <input type="number" name="price" required>
+
+                <p>Descrição do veículo:*</p>
+                <textarea name="description" cols="50" rows="10" placeholder="Descreva seu veículo" required></textarea>
+
+                <p>Único dono?*</p>
+                <select name="unique_owner" required>
+                    <option value="">Selecione</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+
+                <p>Marca do veículo*</p>
+                <input type="text" name="brand" maxlength="30" required>
+
+                <p>Modelo do veículo*</p>
+                <input type="text" name="model" maxlength="30" required>
+
+                <p>Quilometragem:*</p>
+                <input type="number" name="mileage" required>
+
+                <p>Data de compra do veículo:*</p>
+                <input type="date" name="puchase_date" required>
+
+                <p>Câmbio:*</p>
+                <input type="radio" name="gear" value="Manual" required> <p>Manual</p>
+                <input type="radio" name="gear" value="Automatico"> <p>Automático</p>
+
+                <p>Opcionais:</p>
+                <input type="checkbox" value="airbag"> <p>Airbag</p>
+                <input type="checkbox" value="alarm"> <p>Alarme</p>
+                <input type="checkbox" value="ac"> <p>Ar condicionado</p>
+                <input type="checkbox" value="eletric_lock"> <p>Trava elétrica</p>
+                <input type="checkbox" value="eletric_window"> <p>Vidro elétrico</p>
+                <input type="checkbox" value="speaker"> <p>Som</p>
+                <input type="checkbox" value="reverse_camera"> <p>Câmera de ré</p>
+                <input type="checkbox" value="leather_seat"> <p>Banco de couro</p>
+
+                <p>Envie imagens do veículo:*</p>
+                <input type="file" multiple accept="image/png, image/jpg" required>
+
+                <br><br><input type="submit" value="Cadastrar">
+            </form>
+        </header>
+    </body>
+</html>
